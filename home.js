@@ -1,20 +1,40 @@
-const change = document.getElementById('change');
-const color = document.getElementById('color');
+
 const body = document.body;
 
-change.addEventListener('click', changeBG);
 
-function changeBG() {
-const color1 = getRandomRGB();
-const color2 = getRandomRGB();
-const color3 = getRandomRGB();
 
-const colorString = `rgb(${color1}, ${color2}, ${color3})` ;
+function changeBG1() {
 
-body.style.background = colorString;
-color.innerText = colorString;
+    body.classList.toggle('theme-1');
+    body.classList.remove('theme-2');
+    body.classList.remove('theme-3');
+    body.classList.remove('theme-4');
+
 }
 
-function getRandomRGB() {
-    return Math.floor(Math.random() * 256);
+function changeBG2() {
+
+    body.classList.remove('theme-1');
+    body.classList.toggle('theme-2');
+    body.classList.remove('theme-3');
+    body.classList.remove('theme-4');
+
+}
+
+function changeBG3() {
+
+    body.classList.remove('theme-1');
+    body.classList.remove('theme-2');
+    body.classList.toggle('theme-3');
+    body.classList.remove('theme-4');
+
+}
+
+function changeBG4() {
+
+    body.classList.remove('theme-1');
+    body.classList.remove('theme-2');
+    body.classList.remove('theme-3');
+    body.classList.toggle('theme-4');
+
 }
